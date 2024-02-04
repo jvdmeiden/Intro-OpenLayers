@@ -45,3 +45,76 @@ npm start
 
 If you point your browser to the development server the result should look like:
 ![](/images/openlayers.001.jpg)
+## Directory structure and files
+At this moment the following directories and files will have been created in your application directory:
+
+```
+myapp/
+├── .github
+├── .gitignore
+├── <u>index.html</u>
+├── <u>main.js</u>
+├── <u>style.css</u>
+├── node_modules
+│   ├── .bin
+│   .
+│   .
+│   ├── xml-utils
+│   └── zstddec
+├── package.json
+├── package-lock.json
+├── readme.md
+├── style.css
+└── vite.config.js
+```
+
+The most important files are:
+### index.html
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using OpenLayers with Vite</title>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
+```
+
+And
+### main.js
+
+```
+import './style.css';
+import {Map, View} from 'ol';
+import TileLayer from 'ol/layer/Tile';
+import OSM from 'ol/source/OSM';
+
+const map = new Map({
+  target: 'map',
+  layers: [
+    new TileLayer({
+      source: new OSM()
+    })
+  ],
+  view: new View({
+    center: [0, 0],
+    zoom: 2
+  })
+});
+```
+
+### Main concepts
+The main.js file shows some basic concepts of OpenLayers:
+
+- [Map](https://openlayers.org/en/latest/apidoc/module-ol_Map-Map.html): from the ol/map module is the core component of OpenLayers. For a map to render, a view, one or more layers, and a target container are needed.
+- [View](https://openlayers.org/en/latest/apidoc/module-ol_View-View.html): represents a simple 2D view of the map. This is the object to act upon to change the center, resolution, and rotation of the map. A View has a projection.
+- [Source](https://openlayers.org/en/latest/apidoc/module-ol_source.html): this function gets (remote) data for a layer.
+- Layer:a map can have multiple layers of different types like Tile, Image or Vector.
+
