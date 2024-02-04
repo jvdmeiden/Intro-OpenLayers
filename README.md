@@ -44,4 +44,4 @@ npm start
 ```
 
 If you point your browser to the development server the result should look like:
-![](../images/openlayers.001.jpg)
+![](/images/openlayers.001.jpg)
