@@ -116,5 +116,5 @@ The main.js file shows some basic concepts of OpenLayers:
 - [Map](https://openlayers.org/en/latest/apidoc/module-ol_Map-Map.html): from the ol/map module is the core component of OpenLayers. For a map to render, a view, one or more layers, and a target container are needed.
 - [View](https://openlayers.org/en/latest/apidoc/module-ol_View-View.html): represents a simple 2D view of the map. This is the object to act upon to change the center, resolution, and rotation of the map. A View has a projection.
 - [Source](https://openlayers.org/en/latest/apidoc/module-ol_source.html): this function gets (remote) data for a layer.
-- Layer:a map can have multiple layers of different types like Tile, Image or Vector.
+- Layer: a map can have multiple layers of different types like Tile, Image or Vector.
 
