@@ -150,5 +150,21 @@ In order to gain some more understanding of the anatomy of the application you c
 ```
 
 Your browser will load the index.html, main.js javascript and then the openlayer modules followed by the map image which is build of 'png' files which are retreived from the openstreetmap website.
-jvdmeiden@jvdmeiden-desktop
+
+The OpenLayers TileLayer is a map displayed in a web browser by joining dozens of individually requested image (or vector) data files usually 256x256 pixel PNG files. The number of tiles in a map is 2 to the power of the zoom level.
+
+### Zoom level 0
+![](/images/zoom.0.png)
+
+### Zoom level 1
+![](/images/zoom.1.png)
+
+### Zoom level 2
+![](/images/zoom.2.png)
+
+### Zoom level 3
+![](/images/zoom.3.png)
+
+
+
 
