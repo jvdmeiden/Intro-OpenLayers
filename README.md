@@ -4,6 +4,9 @@
 The library renders data like the OpenGIS Consortiums [Web Mapping Service](http://www.opengeospatial.org/standards/wms) (WMS), [Web Feature Service](http://www.opengeospatial.org/standards/wfs) (WFS) protocols and other standards like [GeoJSON](https://geojson.org), [GML](http://www.opengeospatial.org/standards/gml) and many others.
 
 It was developed by a software company [MetaCarta](https://en.wikipedia.org/wiki/MetaCarta) ahead of the O'Reilly 'Where 2.0' conference in June 2006, supposedly as an alternative to Google Maps.
+MetaCarta seems to have disappeared from the internet. This is a screenprint of a still functioning website in 2014:
+![](/images/MetaCartaWebsite.2014.png)
+
 # Installing
 ## Installing build tools for developing OpenLayers based maps on Ubuntu 22.04
 ### Prerequisites on Ubuntu 22.04
