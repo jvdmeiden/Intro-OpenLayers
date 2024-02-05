@@ -118,3 +118,34 @@ The main.js file shows some basic concepts of OpenLayers:
 - [Source](https://openlayers.org/en/latest/apidoc/module-ol_source.html): this function gets (remote) data for a layer.
 - Layer: a map can have multiple layers of different types like Tile, Image or Vector.
 
+### Under the hood
+In order to gain some more understanding of the anatomy of the application you can look at the network traffic between your browser and the development server (depends on your browser, but in Firefox: run 'developer tools &gt; network' and  'save as har' then filter the 'url' lines):<br><br>
+![](/images/openlayers.003.jpg)
+
+```
+          "url": "http://192.168.50.97:5173/",
+          "url": "http://192.168.50.97:5173/@vite/client", ............
+          "url": "http://192.168.50.97:5173/main.js",
+          "url": "http://192.168.50.97:5173/style.css",
+          "url": "http://192.168.50.97:5173/node_modules/.vite/deps/ol.js?v=ef44a998", ........
+
+          "url": "http://192.168.50.97:5173/node_modules/.vite/deps/chunk-ZRN6TD7N.js?v=ef44a998",
+          "url": "http://192.168.50.97:5173/node_modules/.vite/deps/chunk-N7KRV6Z5.js?v=ef44a998",
+          "url": "http://192.168.50.97:5173/node_modules/.vite/deps/chunk-4TDXP2QV.js?v=ef44a998",
+          "url": "https://tile.openstreetmap.org/3/4/4.png",
+          "url": "https://tile.openstreetmap.org/3/4/3.png",
+.
+.
+          "url": "https://tile.openstreetmap.org/3/5/5.png",
+          "url": "https://tile.openstreetmap.org/3/2/5.png",
+          "url": "https://openlayers.org/favicon.ico", .............
+          "url": "https://tile.openstreetmap.org/3/6/3.png",
+          "url": "https://tile.openstreetmap.org/3/6/4.png",
+.
+          "url": "https://tile.openstreetmap.org/3/0/5.png",
+          "url": "https://tile.openstreetmap.org/3/0/2.png",
+```
+
+Your browser will load the index.html, main.js javascript and then the openlayer modules followed by the map image which is build of 'png' files which are retreived from the openstreetmap website.
+jvdmeiden@jvdmeiden-desktop
+
