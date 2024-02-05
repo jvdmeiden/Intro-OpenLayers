@@ -165,6 +165,7 @@ The OpenLayers TileLayer is a map displayed in a web browser by joining dozens o
 ### Zoom level 3
 ![](/images/zoom.3.png)
 
+(Sample created using [tiles.sample.sh](/scripts/tiles.sample.sh))
 
 
 
