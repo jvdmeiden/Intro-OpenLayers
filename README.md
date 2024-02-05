@@ -30,7 +30,7 @@ Then install 'git':
 sudo apt install git
 ```
 
-## OpenLayers 'Getting Started'
+# OpenLayers 'Getting Started'
 Now you are able to create the OpenLayers 'getting started app':
 
 
