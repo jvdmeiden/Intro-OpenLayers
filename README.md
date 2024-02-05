@@ -4,6 +4,7 @@
 The library renders data like the OpenGIS Consortiums [Web Mapping Service](http://www.opengeospatial.org/standards/wms) (WMS), [Web Feature Service](http://www.opengeospatial.org/standards/wfs) (WFS) protocols and other standards like [GeoJSON](https://geojson.org), [GML](http://www.opengeospatial.org/standards/gml) and many others.
 
 It was developed by a software company [MetaCarta](https://en.wikipedia.org/wiki/MetaCarta) ahead of the O'Reilly 'Where 2.0' conference in June 2006, supposedly as an alternative to Google Maps.
+# Installing
 ## Installing build tools for developing OpenLayers based maps on Ubuntu 22.04
 ### Prerequisites on Ubuntu 22.04
 Before installing the build tools and sources for developing OpenLayers based mappings on a plain Ubuntu 22.04 system make sure 'curl' and a version of 'node.js' later than version 14 are installed, for instance by running:
@@ -26,7 +27,7 @@ Then install 'git':
 sudo apt install git
 ```
 
-### Install OpenLayers 'getting started'
+## OpenLayers 'Getting Started'
 Now you are able to create the OpenLayers 'getting started app':
 
 
@@ -45,8 +46,10 @@ npm start
 
 If you point your browser to the development server the result should look like:
 ![](/images/openlayers.001.jpg)
+
+# The Anatomy of OpenLayers 'Getting Started'
 ## Directory structure and files
-At this moment the following directories and files will have been created in your application directory:
+At this moment the following directories and files will have been created in your application development directory:
 
 ```
 myapp/
@@ -69,7 +72,7 @@ myapp/
 ```
 
 The most important files are:
-### index.html
+## index.html
 
 ```
 <!DOCTYPE html>
@@ -88,7 +91,7 @@ The most important files are:
 ```
 
 And
-### main.js
+## main.js
 
 ```
 import './style.css';
@@ -110,7 +113,7 @@ const map = new Map({
 });
 ```
 
-### Main concepts
+## Basic Concepts
 The main.js file shows some basic concepts of OpenLayers:
 
 - [Map](https://openlayers.org/en/latest/apidoc/module-ol_Map-Map.html): from the ol/map module is the core component of OpenLayers. For a map to render, a view, one or more layers, and a target container are needed.
@@ -118,7 +121,7 @@ The main.js file shows some basic concepts of OpenLayers:
 - [Source](https://openlayers.org/en/latest/apidoc/module-ol_source.html): this function gets (remote) data for a layer.
 - Layer: a map can have multiple layers of different types like Tile, Image or Vector.
 
-### Under the hood
+## Under the hood of OpenLayers 'getting started'
 In order to gain some more understanding of the anatomy of the application you can look at the network traffic between your browser and the development server (depends on your browser, but in Firefox: run 'developer tools &gt; network' and  'save as har' then filter the 'url' lines):<br><br>
 ![](/images/openlayers.003.jpg)
 
@@ -132,7 +135,7 @@ In order to gain some more understanding of the anatomy of the application you c
           "url": "http://192.168.50.97:5173/node_modules/.vite/deps/chunk-ZRN6TD7N.js?v=ef44a998",
           "url": "http://192.168.50.97:5173/node_modules/.vite/deps/chunk-N7KRV6Z5.js?v=ef44a998",
           "url": "http://192.168.50.97:5173/node_modules/.vite/deps/chunk-4TDXP2QV.js?v=ef44a998",
-          "url": "https://tile.openstreetmap.org/3/4/4.png",
+          "url": "https://tile.openstreetmap.org/3 of t/4/4.png",
           "url": "https://tile.openstreetmap.org/3/4/3.png",
 .
 .
